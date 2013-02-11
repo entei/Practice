@@ -1,5 +1,5 @@
 Practic::Application.routes.draw do
-  resources :divisions
+  resources :computers
 
 
   # The priority is based upon order of creation:
