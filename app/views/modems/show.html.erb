@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Model:</b>
+  <%= @modem.model %>
+</p>
+
+<p>
+  <b>Modem type:</b>
+  <%= @modem.modem_type %>
+</p>
+
+<p>
+  <b>Speed:</b>
+  <%= @modem.speed %>
+</p>
+
+<p>
+  <b>Source:</b>
+  <%= @modem.source %>
+</p>
+
+<p>
+  <b>Commissioning:</b>
+  <%= @modem.commissioning %>
+</p>
+
+<p>
+  <b>Task:</b>
+  <%= @modem.task %>
+</p>
+
+<p>
+  <b>Decommissioning:</b>
+  <%= @modem.decommissioning %>
+</p>
+
+<p>
+  <b>Comment:</b>
+  <%= @modem.comment %>
+</p>
+
+<p>
+  <b>Station:</b>
+  <%= @modem.station_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_modem_path(@modem) %> |
+<%= link_to 'Back', modems_path %>

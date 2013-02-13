@@ -12,16 +12,56 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
+    <%= f.label :computer_model %><br />
+    <%= f.text_field :computer_model %>
   </div>
   <div class="field">
-    <%= f.label :serial %>
-    <%= f.text_field :serial %>
+    <%= f.label :comp_type %><br />
+    <%= f.text_field :comp_type %>
   </div>
   <div class="field">
-    <%= f.label :status %>
-    <%= f.text_field :status %>
+    <%= f.label :comp_class %><br />
+    <%= f.text_field :comp_class %>
+  </div>
+  <div class="field">
+    <%= f.label :platform %><br />
+    <%= f.text_field :platform %>
+  </div>
+  <div class="field">
+    <%= f.label :processor %><br />
+    <%= f.text_field :processor %>
+  </div>
+  <div class="field">
+    <%= f.label :memory %><br />
+    <%= f.text_field :memory %>
+  </div>
+  <div class="field">
+    <%= f.label :hdd %><br />
+    <%= f.text_field :hdd %>
+  </div>
+  <div class="field">
+    <%= f.label :display %><br />
+    <%= f.text_field :display %>
+  </div>
+  <div class="field">
+    <%= f.label :source %><br />
+    <%= f.text_field :source %>
+  </div>
+  <div class="field">
+    <%= f.label :commissioning %><br />
+    <%= f.date_select :commissioning %>
+  </div>
+  <div class="field">
+    <%= f.label :task %><br />
+    <%= f.text_field :task %>
+  </div>
+  <div class="field">
+    <%= f.label :decommissioning %><br />
+    <%= f.date_select :decommissioning %>
+  </div>
+  <div class="field">
+    <%= f.label :comment %><br />
+    <%= f.text_field :comment %>
   </div>
   <div class="actions">
     <%= f.submit %>

@@ -1,0 +1,53 @@
+<%= form_for(@modem) do |f| %>
+  <% if @modem.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@modem.errors.count, "error") %> prohibited this modem from being saved:</h2>
+
+      <ul>
+      <% @modem.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :model %><br />
+    <%= f.text_field :model %>
+  </div>
+  <div class="field">
+    <%= f.label :modem_type %><br />
+    <%= f.text_field :modem_type %>
+  </div>
+  <div class="field">
+    <%= f.label :speed %><br />
+    <%= f.text_field :speed %>
+  </div>
+  <div class="field">
+    <%= f.label :source %><br />
+    <%= f.text_field :source %>
+  </div>
+  <div class="field">
+    <%= f.label :commissioning %><br />
+    <%= f.date_select :commissioning %>
+  </div>
+  <div class="field">
+    <%= f.label :task %><br />
+    <%= f.text_field :task %>
+  </div>
+  <div class="field">
+    <%= f.label :decommissioning %><br />
+    <%= f.date_select :decommissioning %>
+  </div>
+  <div class="field">
+    <%= f.label :comment %><br />
+    <%= f.text_field :comment %>
+  </div>
+  <div class="field">
+    <%= f.label :station_id %><br />
+    <%= f.number_field :station_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

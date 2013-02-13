@@ -18,7 +18,7 @@ class ComputersControllerTest < ActionController::TestCase
 
   test "should create computer" do
     assert_difference('Computer.count') do
-      post :create, computer: { serial: @computer.serial, status: @computer.status, title: @computer.title }
+      post :create, computer: { comment: @computer.comment, commissioning: @computer.commissioning, comp_class: @computer.comp_class, comp_type: @computer.comp_type, computer_model: @computer.computer_model, decommissioning: @computer.decommissioning, display: @computer.display, hdd: @computer.hdd, memory: @computer.memory, platform: @computer.platform, processor: @computer.processor, source: @computer.source, task: @computer.task }
     end
 
     assert_redirected_to computer_path(assigns(:computer))
@@ -35,7 +35,7 @@ class ComputersControllerTest < ActionController::TestCase
   end
 
   test "should update computer" do
-    put :update, id: @computer, computer: { serial: @computer.serial, status: @computer.status, title: @computer.title }
+    put :update, id: @computer, computer: { comment: @computer.comment, commissioning: @computer.commissioning, comp_class: @computer.comp_class, comp_type: @computer.comp_type, computer_model: @computer.computer_model, decommissioning: @computer.decommissioning, display: @computer.display, hdd: @computer.hdd, memory: @computer.memory, platform: @computer.platform, processor: @computer.processor, source: @computer.source, task: @computer.task }
     assert_redirected_to computer_path(assigns(:computer))
   end
 

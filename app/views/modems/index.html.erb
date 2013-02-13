@@ -1,0 +1,39 @@
+<h1>Listing modems</h1>
+
+<table>
+  <tr>
+    <th>Model</th>
+    <th>Modem type</th>
+    <th>Speed</th>
+    <th>Source</th>
+    <th>Commissioning</th>
+    <th>Task</th>
+    <th>Decommissioning</th>
+    <th>Comment</th>
+    <th>Station</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @modems.each do |modem| %>
+  <tr>
+    <td><%= modem.model %></td>
+    <td><%= modem.modem_type %></td>
+    <td><%= modem.speed %></td>
+    <td><%= modem.source %></td>
+    <td><%= modem.commissioning %></td>
+    <td><%= modem.task %></td>
+    <td><%= modem.decommissioning %></td>
+    <td><%= modem.comment %></td>
+    <td><%= modem.station_id %></td>
+    <td><%= link_to 'Show', modem %></td>
+    <td><%= link_to 'Edit', edit_modem_path(modem) %></td>
+    <td><%= link_to 'Destroy', modem, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Modem', new_modem_path %>

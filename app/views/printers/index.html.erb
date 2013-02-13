@@ -1,0 +1,41 @@
+<h1>Listing printers</h1>
+
+<table>
+  <tr>
+    <th>Device</th>
+    <th>Printer model</th>
+    <th>Printer type</th>
+    <th>Page format</th>
+    <th>Chroma</th>
+    <th>Source</th>
+    <th>Commissioning</th>
+    <th>Task</th>
+    <th>Decommissioning</th>
+    <th>Comment</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @printers.each do |printer| %>
+  <tr>
+    <td><%= printer.device %></td>
+    <td><%= printer.printer_model %></td>
+    <td><%= printer.printer_type %></td>
+    <td><%= printer.page_format %></td>
+    <td><%= printer.chroma %></td>
+    <td><%= printer.source %></td>
+    <td><%= printer.commissioning %></td>
+    <td><%= printer.task %></td>
+    <td><%= printer.decommissioning %></td>
+    <td><%= printer.comment %></td>
+    <td><%= link_to 'Show', printer %></td>
+    <td><%= link_to 'Edit', edit_printer_path(printer) %></td>
+    <td><%= link_to 'Destroy', printer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Printer', new_printer_path %>

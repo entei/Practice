@@ -11,20 +11,65 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130211141305) do
+ActiveRecord::Schema.define(:version => 20130212200727) do
 
   create_table "computers", :force => true do |t|
-    t.string   "title"
-    t.decimal  "serial"
-    t.string   "status"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.string   "computer_model"
+    t.string   "comp_type"
+    t.string   "comp_class"
+    t.string   "platform"
+    t.string   "processor"
+    t.float    "memory"
+    t.float    "hdd"
+    t.string   "display"
+    t.string   "source"
+    t.date     "commissioning"
+    t.string   "task"
+    t.date     "decommissioning"
+    t.string   "comment"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
   end
 
-  create_table "divisions", :force => true do |t|
-    t.string   "title"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+  create_table "devices", :force => true do |t|
+    t.string   "device_type"
+    t.string   "device_model"
+    t.string   "source"
+    t.date     "commissioning"
+    t.string   "task"
+    t.date     "decommissioning"
+    t.string   "comment"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
+  create_table "modems", :force => true do |t|
+    t.string   "model"
+    t.string   "modem_type"
+    t.string   "speed"
+    t.string   "source"
+    t.date     "commissioning"
+    t.string   "task"
+    t.date     "decommissioning"
+    t.string   "comment"
+    t.integer  "station_id"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
+  create_table "printers", :force => true do |t|
+    t.string   "device"
+    t.string   "printer_model"
+    t.string   "printer_type"
+    t.string   "page_format"
+    t.string   "chroma"
+    t.string   "source"
+    t.string   "commissioning"
+    t.string   "task"
+    t.date     "decommissioning"
+    t.string   "comment"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
   end
 
 end

@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Device type:</b>
+  <%= @device.device_type %>
+</p>
+
+<p>
+  <b>Device model:</b>
+  <%= @device.device_model %>
+</p>
+
+<p>
+  <b>Source:</b>
+  <%= @device.source %>
+</p>
+
+<p>
+  <b>Commissioning:</b>
+  <%= @device.commissioning %>
+</p>
+
+<p>
+  <b>Task:</b>
+  <%= @device.task %>
+</p>
+
+<p>
+  <b>Decommissioning:</b>
+  <%= @device.decommissioning %>
+</p>
+
+<p>
+  <b>Comment:</b>
+  <%= @device.comment %>
+</p>
+
+
+<%= link_to 'Edit', edit_device_path(@device) %> |
+<%= link_to 'Back', devices_path %>

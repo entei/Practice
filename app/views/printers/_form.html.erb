@@ -1,0 +1,57 @@
+<%= form_for(@printer) do |f| %>
+  <% if @printer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@printer.errors.count, "error") %> prohibited this printer from being saved:</h2>
+
+      <ul>
+      <% @printer.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :device %><br />
+    <%= f.text_field :device %>
+  </div>
+  <div class="field">
+    <%= f.label :printer_model %><br />
+    <%= f.text_field :printer_model %>
+  </div>
+  <div class="field">
+    <%= f.label :printer_type %><br />
+    <%= f.text_field :printer_type %>
+  </div>
+  <div class="field">
+    <%= f.label :page_format %><br />
+    <%= f.text_field :page_format %>
+  </div>
+  <div class="field">
+    <%= f.label :chroma %><br />
+    <%= f.text_field :chroma %>
+  </div>
+  <div class="field">
+    <%= f.label :source %><br />
+    <%= f.text_field :source %>
+  </div>
+  <div class="field">
+    <%= f.label :commissioning %><br />
+    <%= f.text_field :commissioning %>
+  </div>
+  <div class="field">
+    <%= f.label :task %><br />
+    <%= f.text_field :task %>
+  </div>
+  <div class="field">
+    <%= f.label :decommissioning %><br />
+    <%= f.date_select :decommissioning %>
+  </div>
+  <div class="field">
+    <%= f.label :comment %><br />
+    <%= f.text_field :comment %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

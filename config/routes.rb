@@ -1,5 +1,18 @@
 Practic::Application.routes.draw do
+
+  resources :devices
+
+
   resources :computers
+
+
+  resources :printers
+
+
+  resources :modems
+
+
+  resources :computers, :divisions
 
 
   # The priority is based upon order of creation:

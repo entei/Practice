@@ -1,18 +1,40 @@
-<h3>Inventory</h3>    <br/>
+<h1>Listing computers</h1>
 
-<table class="table" >
+<table>
   <tr>
-    <th>Title</th>
-    <th>Serial</th>
-    <th>Status</th>
-
+    <th>Computer model</th>
+    <th>Comp type</th>
+    <th>Comp class</th>
+    <th>Platform</th>
+    <th>Processor</th>
+    <th>Memory</th>
+    <th>Hdd</th>
+    <th>Display</th>
+    <th>Source</th>
+    <th>Commissioning</th>
+    <th>Task</th>
+    <th>Decommissioning</th>
+    <th>Comment</th>
+    <th></th>
+    <th></th>
+    <th></th>
   </tr>
 
 <% @computers.each do |computer| %>
   <tr>
-    <td><%= computer.title %></td>
-    <td><%= computer.serial %></td>
-    <td><%= computer.status %></td>
+    <td><%= computer.computer_model %></td>
+    <td><%= computer.comp_type %></td>
+    <td><%= computer.comp_class %></td>
+    <td><%= computer.platform %></td>
+    <td><%= computer.processor %></td>
+    <td><%= computer.memory %></td>
+    <td><%= computer.hdd %></td>
+    <td><%= computer.display %></td>
+    <td><%= computer.source %></td>
+    <td><%= computer.commissioning %></td>
+    <td><%= computer.task %></td>
+    <td><%= computer.decommissioning %></td>
+    <td><%= computer.comment %></td>
     <td><%= link_to 'Show', computer %></td>
     <td><%= link_to 'Edit', edit_computer_path(computer) %></td>
     <td><%= link_to 'Destroy', computer, method: :delete, data: { confirm: 'Are you sure?' } %></td>

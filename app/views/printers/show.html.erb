@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Device:</b>
+  <%= @printer.device %>
+</p>
+
+<p>
+  <b>Printer model:</b>
+  <%= @printer.printer_model %>
+</p>
+
+<p>
+  <b>Printer type:</b>
+  <%= @printer.printer_type %>
+</p>
+
+<p>
+  <b>Page format:</b>
+  <%= @printer.page_format %>
+</p>
+
+<p>
+  <b>Chroma:</b>
+  <%= @printer.chroma %>
+</p>
+
+<p>
+  <b>Source:</b>
+  <%= @printer.source %>
+</p>
+
+<p>
+  <b>Commissioning:</b>
+  <%= @printer.commissioning %>
+</p>
+
+<p>
+  <b>Task:</b>
+  <%= @printer.task %>
+</p>
+
+<p>
+  <b>Decommissioning:</b>
+  <%= @printer.decommissioning %>
+</p>
+
+<p>
+  <b>Comment:</b>
+  <%= @printer.comment %>
+</p>
+
+
+<%= link_to 'Edit', edit_printer_path(@printer) %> |
+<%= link_to 'Back', printers_path %>
