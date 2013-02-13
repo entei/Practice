@@ -59,10 +59,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="printer.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="printer.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/printer.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="47" selection-start="215" selection-end="215" vertical-scroll-proportion="0.18847007">
+            <state line="5" column="47" selection-start="215" selection-end="215" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="department.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/department.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="18" selection-start="56" selection-end="56" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="20130213091624_create_departments.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20130213091624_create_departments.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="28" selection-start="250" selection-end="250" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Gemfile" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Gemfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="8" selection-start="436" selection-end="436" vertical-scroll-proportion="0.8677494">
               <folding />
             </state>
           </provider>
@@ -81,9 +108,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/db/migrate/20130212154430_create_printers.rb" />
-        <option value="$PROJECT_DIR$/db/migrate/20130212155100_create_modems.rb" />
-        <option value="$PROJECT_DIR$/db/migrate/20130212155616_create_hardwares.rb" />
         <option value="$PROJECT_DIR$/app/models/hardware.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20130212174718_rename_database_column.rb" />
         <option value="$PROJECT_DIR$/app/controllers/equipment_controller.rb" />
@@ -97,6 +121,9 @@
         <option value="$PROJECT_DIR$/db/migrate/20130213084807_add_station_id_to_computers.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20130213084919_add_station_id_to_printers.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20130213084845_add_station_id_to_devices.rb" />
+        <option value="$PROJECT_DIR$/app/models/department.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20130213091624_create_departments.rb" />
+        <option value="$PROJECT_DIR$/Gemfile" />
       </list>
     </option>
   </component>
@@ -170,24 +197,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="db" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Practic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Practic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="db" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migrate" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -719,18 +728,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/controllers/printers_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/modems_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/production.sqlite3">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -817,7 +814,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/printer.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="47" selection-start="215" selection-end="215" vertical-scroll-proportion="0.18847007">
+        <state line="5" column="47" selection-start="215" selection-end="215" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/department.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="18" selection-start="56" selection-end="56" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20130213091624_create_departments.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="28" selection-start="250" selection-end="250" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="8" selection-start="436" selection-end="436" vertical-scroll-proportion="0.8677494">
           <folding />
         </state>
       </provider>

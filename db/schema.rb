@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130213084919) do
+ActiveRecord::Schema.define(:version => 20130213091624) do
 
   create_table "computers", :force => true do |t|
     t.string   "computer_model"
@@ -33,6 +33,16 @@ ActiveRecord::Schema.define(:version => 20130213084919) do
   end
 
   add_index "computers", ["station_id"], :name => "index_computers_on_station_id"
+
+  create_table "departments", :force => true do |t|
+    t.string   "name"
+    t.string   "type"
+    t.integer  "district_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  add_index "departments", ["district_id"], :name => "index_departments_on_district_id"
 
   create_table "devices", :force => true do |t|
     t.string   "device_type"
