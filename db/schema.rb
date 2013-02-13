@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130212200727) do
+ActiveRecord::Schema.define(:version => 20130213084919) do
 
   create_table "computers", :force => true do |t|
     t.string   "computer_model"
@@ -29,7 +29,10 @@ ActiveRecord::Schema.define(:version => 20130212200727) do
     t.string   "comment"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
+    t.integer  "station_id"
   end
+
+  add_index "computers", ["station_id"], :name => "index_computers_on_station_id"
 
   create_table "devices", :force => true do |t|
     t.string   "device_type"
@@ -41,7 +44,10 @@ ActiveRecord::Schema.define(:version => 20130212200727) do
     t.string   "comment"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
+    t.integer  "station_id"
   end
+
+  add_index "devices", ["station_id"], :name => "index_devices_on_station_id"
 
   create_table "modems", :force => true do |t|
     t.string   "model"
@@ -57,6 +63,8 @@ ActiveRecord::Schema.define(:version => 20130212200727) do
     t.datetime "updated_at",      :null => false
   end
 
+  add_index "modems", ["station_id"], :name => "index_modems_on_station_id"
+
   create_table "printers", :force => true do |t|
     t.string   "device"
     t.string   "printer_model"
@@ -70,6 +78,9 @@ ActiveRecord::Schema.define(:version => 20130212200727) do
     t.string   "comment"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
+    t.integer  "station_id"
   end
+
+  add_index "printers", ["station_id"], :name => "index_printers_on_station_id"
 
 end

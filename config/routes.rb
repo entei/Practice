@@ -1,5 +1,8 @@
 Practic::Application.routes.draw do
 
+  resources :departments
+
+
   resources :devices
 
 
