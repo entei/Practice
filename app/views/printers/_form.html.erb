@@ -13,8 +13,11 @@
 
     <div class="field">
       <%= f.label :device %>
-
-      <%= f.text_field :device %>
+      <%= f.select :device, [['Принтер'],
+      ['Сканер'],
+      ['Копир'],
+      ['МФУ']]%>  
+      
     </div>
     <div class="field">
       <%= f.label :printer_model %>
@@ -23,23 +26,33 @@
     </div>
     <div class="field">
       <%= f.label :printer_type %>
-
-      <%= f.text_field :printer_type %>
+       <%= f.select :printer_type, [['Планшетный'],
+      ['Лазерный'],
+      ['Струйный'],
+      ['Матричный']]%>  
+      
     </div>
     <div class="field">
       <%= f.label :page_format %>
-
-      <%= f.text_field :page_format %>
+      <%= f.select :page_format, [['A3'],
+      ['A4']]%>  
+      
     </div>
     <div class="field">
       <%= f.label :chroma %>
-
-      <%= f.text_field :chroma %>
+      <%= f.select :chroma, [['Цветной'],
+      ['Черно-белый']]%>  
     </div>
     <div class="field">
       <%= f.label :source %>
-
-      <%= f.text_field :source %>
+      <%= f.select :source, [['Республиканский бюджет'],
+      ['Местный бюджет'],
+      ['На балансе сторонней организации'],
+      ['Передано безвозмездно'],
+      ['Получено из других подразделений'],
+      ['Спонсорские средства '],
+      ['Платные услуги']]%>  
+      
     </div>
     <div class="field">
       <%= f.label :commissioning %>
