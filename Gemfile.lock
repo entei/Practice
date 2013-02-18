@@ -103,6 +103,9 @@ GEM
       polyglot
       polyglot (>= 0.3.1)
     tzinfo (0.3.35)
+    uglifier (1.2.3)
+      execjs (>= 0.3.0)
+      multi_json (>= 1.0.2)
     will_paginate (3.0.4)
 
 PLATFORMS
@@ -118,4 +121,5 @@ DEPENDENCIES
   rails (= 3.2.12)
   sass-rails (= 3.2.5)
   sqlite3 (= 1.3.5)
+  uglifier (= 1.2.3)
   will_paginate
