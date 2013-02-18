@@ -1,14 +1,14 @@
 class ComputersController < ApplicationController
   # GET /computers
   # GET /computers.json
-  def index
-    @computers = Computer.all
-    @station_id = params[:station_id]
-    #respond_to do |format|
-    #  format.html # index.html.erb
-    #  format.json { render json: @computers }
-    #end
-  end
+  #def index
+  #  @computers = Computer.all
+  #  @station_id = params[:station_id]
+  #  #respond_to do |format|
+  #  #  format.html # index.html.erb
+  #  #  format.json { render json: @computers }
+  #  #end
+  #end
 
   # GET /computers/1
   # GET /computers/1.json

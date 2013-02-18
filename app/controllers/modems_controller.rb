@@ -1,15 +1,15 @@
 class ModemsController < ApplicationController
   # GET /modems
-  # GET /modems.json
-  def index
-    @modems = Modem.all
-
-    @station_id = params[:station_id]
-    #respond_to do |format|
-    #  format.html # index.html.erb
-    #  format.json { render json: @modems }
-    #end
-  end
+  ## GET /modems.json
+  #def index
+  #  @modems = Modem.all
+  #
+  #  @station_id = params[:station_id]
+  #  #respond_to do |format|
+  #  #  format.html # index.html.erb
+  #  #  format.json { render json: @modems }
+  #  #end
+  #end
 
   # GET /modems/1
   # GET /modems/1.json

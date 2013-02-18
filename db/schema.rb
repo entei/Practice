@@ -72,12 +72,12 @@ ActiveRecord::Schema.define(:version => 20130215171206) do
     t.string   "page_format"
     t.string   "chroma"
     t.string   "source"
-    t.date     "commissioning",   :limit => 255
+    t.date     "commissioning"
     t.string   "task"
     t.date     "decommissioning"
     t.string   "comment"
-    t.datetime "created_at",                     :null => false
-    t.datetime "updated_at",                     :null => false
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
     t.integer  "station_id"
   end
 

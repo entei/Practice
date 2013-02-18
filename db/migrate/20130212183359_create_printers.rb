@@ -7,7 +7,7 @@ class CreatePrinters < ActiveRecord::Migration
       t.string :page_format
       t.string :chroma
       t.string :source
-      t.string :commissioning
+      t.date :commissioning
       t.string :task
       t.date :decommissioning
       t.string :comment

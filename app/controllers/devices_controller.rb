@@ -1,14 +1,14 @@
 class DevicesController < ApplicationController
   # GET /devices
   # GET /devices.json
-  def index
-    @devices = Device.all
-    @station_id = params[:station_id]
-    #respond_to do |format|
-    #  format.html # index.html.erb
-    #  format.json { render json: @devices }
-    #end
-  end
+  #def index
+  #  @devices = Device.all
+  #  @station_id = params[:station_id]
+  #  #respond_to do |format|
+  #  #  format.html # index.html.erb
+  #  #  format.json { render json: @devices }
+  #  #end
+  #end
 
   # GET /devices/1
   # GET /devices/1.json

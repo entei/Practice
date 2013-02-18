@@ -1,15 +1,15 @@
 class PrintersController < ApplicationController
   # GET /printers
   # GET /printers.json
-  def index
-    @printers = Printer.all
-    @station_id = params[:station_id]
-
-    #respond_to do |format|
-    #  format.html # index.html.erb
-    #  format.json { render json: @printers }
-    #end
-  end
+  #def index
+  #  @printers = Printer.all
+  #  @station_id = params[:station_id]
+  #
+  #  #respond_to do |format|
+  #  #  format.html # index.html.erb
+  #  #  format.json { render json: @printers }
+  #  #end
+  #end
 
   # GET /printers/1
   # GET /printers/1.json
@@ -46,14 +46,14 @@ class PrintersController < ApplicationController
     @station = Station.find_by_id(params[:station_id])
     @printer = @station.printers.new(params[:printer])
     respond_to do |format|
-    if @printer.save
-     # redirect_to station_path(@station)
-         format.html { redirect_to station_path(@station), notice: 'Printer was successfully created.' }
-         format.json { render json: @printer, status: :created, location: @printer }
-    else
-          format.html { render action: "new" }
-          format.json { render json: @printer.errors, status: :unprocessable_entity }
-          end
+      if @printer.save
+        # redirect_to station_path(@station)
+        format.html { redirect_to station_path(@station), notice: 'Printer was successfully created.' }
+        format.json { render json: @printer, status: :created, location: @printer }
+      else
+        format.html { render action: "new" }
+        #format.json { render json: @printer.errors, status: :unprocessable_entity }
+      end
     end
   end
 
@@ -63,14 +63,14 @@ class PrintersController < ApplicationController
     @printer = Printer.find(params[:id])
 
     respond_to do |format|
-    if @printer.update_attributes(params[:printer])
-     # redirect_to station_printer_path(@printer.station_id, @printer)
-      format.html { redirect_to station_printer_path(@printer.station_id, @printer), notice: 'Printer was successfully updated.' }
-      format.json { head :no_content }
-    else
-      format.html { render action: "edit" }
-      format.json { render json: @printer.errors, status: :unprocessable_entity }
-    end
+      if @printer.update_attributes(params[:printer])
+        # redirect_to station_printer_path(@printer.station_id, @printer)
+        format.html { redirect_to station_printer_path(@printer.station_id, @printer), notice: 'Printer was successfully updated.' }
+        format.json { head :no_content }
+      else
+        format.html { render action: "edit" }
+        format.json { render json: @printer.errors, status: :unprocessable_entity }
+      end
     end
   end
 
