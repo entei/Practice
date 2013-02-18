@@ -1,39 +1,27 @@
 <h1>Listing modems</h1>
+<% if @modems.any? %>
+    modems
+    <table class="table">
+      <thead>
+      <tr class="success">
+        <th>Model</th>
+        <th>Type</th>
+        <th>Station_id</th>
+      </tr>
+      </thead>
+      <tbody>
 
-<table>
-  <tr>
-    <th>Model</th>
-    <th>Modem type</th>
-    <th>Speed</th>
-    <th>Source</th>
-    <th>Commissioning</th>
-    <th>Task</th>
-    <th>Decommissioning</th>
-    <th>Comment</th>
-    <th>Station</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @modems.each do |modem| %>
-  <tr>
-    <td><%= modem.model %></td>
-    <td><%= modem.modem_type %></td>
-    <td><%= modem.speed %></td>
-    <td><%= modem.source %></td>
-    <td><%= modem.commissioning %></td>
-    <td><%= modem.task %></td>
-    <td><%= modem.decommissioning %></td>
-    <td><%= modem.comment %></td>
-    <td><%= modem.station_id %></td>
-    <td><%= link_to 'Show', station_modems_path %></td>
-   <td><%= link_to 'Edit', '#' %></td>
-    <td><%= link_to 'Destroy', '#' %></td>
-  </tr>
+      <% @modems.each do |modem| %>
+          <tr>
+            <td><%= modem.model %></td>
+            <td> <%= modem.modem_type %> </td>
+            <td> <%= modem.station_id %> </td>
+            <td> <%= link_to "show", station_modem_path(@station, modem) %></td>
+            <td><%= link_to "edit", edit_station_modem_path(@station, modem) %></td>
+            <td><%= link_to "delete", "#" %></td>
+          </tr>
+          </tbody>
+      <% end %>
+      </table>
 <% end %>
-</table>
-
-<br />
-
 

@@ -1,35 +1,27 @@
 <h1>Listing devices</h1>
 
-<table>
-  <tr>
-    <th>Device type</th>
-    <th>Device model</th>
-    <th>Source</th>
-    <th>Commissioning</th>
-    <th>Task</th>
-    <th>Decommissioning</th>
-    <th>Comment</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<% if @devices.any? %>
+    device
+    <table class="table">
+      <thead>
+      <tr>
+        <th>Model</th>
+        <th>Type</th>
+        <th>Station_id</th>
+      </tr>
+      </thead>
+      <tbody>
 
-<% @devices.each do |device| %>
-  <tr>
-    <td><%= device.device_type %></td>
-    <td><%= device.device_model %></td>
-    <td><%= device.source %></td>
-    <td><%= device.commissioning %></td>
-    <td><%= device.task %></td>
-    <td><%= device.decommissioning %></td>
-    <td><%= device.comment %></td>
-    <td><%= link_to 'Show', device %></td>
-    <td><%= link_to 'Edit', edit_device_path(device) %></td>
-    <td><%= link_to 'Destroy', device, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+      <% @devices.each do |d| %>
+          <tr>
+            <td><%= d.device_model %></td>
+            <td> <%= d.device_type %> </td>
+            <td> <%= d.station_id %> </td>
+            <td> <%= link_to "show", station_device_path(@station, d) %></td>
+            <td><%= link_to "edit", edit_station_device_path(@station, d) %></td>
+            <td><%= link_to "delete", '#' %></td>
+          </tr>
+          </tbody>
+      <% end %>
+      </table>
 <% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Device', new_device_path %>

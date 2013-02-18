@@ -5,10 +5,10 @@ class ModemsController < ApplicationController
     @modems = Modem.all
 
     @station_id = params[:station_id]
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @modems }
-    end
+    #respond_to do |format|
+    #  format.html # index.html.erb
+    #  format.json { render json: @modems }
+    #end
   end
 
   # GET /modems/1
@@ -51,14 +51,14 @@ class ModemsController < ApplicationController
     @modem = @station.modems.new(params[:modem])
 
 
-    # respond_to do |format|
-    if @modem.save
-      redirect_to station_path(@station)
-      # format.html { redirect_to @modem, notice: 'Modem was successfully created.' }
-      # format.json { render json: @modem, status: :created, location: @modem }
-    else
-      # format.html { render action: "new" }
-      #      end
+    respond_to do |format|
+      if @modem.save
+        # redirect_to station_path(@station)
+        format.html { redirect_to station_path(@station), notice: 'Modem was successfully created.' }
+        format.json { render json: @modem, status: :created, location: @modem }
+      else
+        format.html { render action: "new" }
+      end
     end
   end
 
@@ -66,17 +66,17 @@ class ModemsController < ApplicationController
   # PUT /modems/1.json
   def update
     @modem = Modem.find(params[:id])
-    @station = Station.find_by_id(params[:station_id])
-    #respond_to do |format|
-    if @modem.update_attributes(params[:modem])
-      redirect_to station_modem_path(@modem)
-#        format.html { redirect_to @modem, notice: 'Modem was successfully updated.' }
-#        format.json { head :no_content }
-    else
-#        format.html { render action: "edit" }
-#        format.json { render json: @modem.errors, status: :unprocessable_entity }
+
+    respond_to do |format|
+      if @modem.update_attributes(params[:modem])
+        #redirect_to station_modem_path(@modem.station_id, @modem)
+        format.html { redirect_to station_modem_path(@modem.station_id, @modem), notice: 'Modem was successfully updated.' }
+        format.json { head :no_content }
+      else
+        format.html { render action: "edit" }
+        format.json { render json: @modem.errors, status: :unprocessable_entity }
+      end
     end
-#end
   end
 
   # DELETE /modems/1

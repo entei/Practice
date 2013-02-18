@@ -1,6 +1,8 @@
-<h1>Editing device</h1>
+<div class="alert">
+  <h2>Editing device</h2>
+</div>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @device %> |
-<%= link_to 'Back', devices_path %>
+<%= link_to 'Show', station_device_path %> |
+<%= link_to 'Back', station_path(@station_id) %>

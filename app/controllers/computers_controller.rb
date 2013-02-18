@@ -4,10 +4,10 @@ class ComputersController < ApplicationController
   def index
     @computers = Computer.all
     @station_id = params[:station_id]
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @computers }
-    end
+    #respond_to do |format|
+    #  format.html # index.html.erb
+    #  format.json { render json: @computers }
+    #end
   end
 
   # GET /computers/1
@@ -16,8 +16,8 @@ class ComputersController < ApplicationController
     @computer = Computer.find(params[:id])
     @station_id = params[:station_id]
     #respond_to do |format|
-     # format.html # show.html.erb
-     # format.json { render json: @computer }
+    # format.html # show.html.erb
+    # format.json { render json: @computer }
     #end
   end
 
@@ -45,15 +45,15 @@ class ComputersController < ApplicationController
     @station = Station.find_by_id(params[:station_id])
     @computer = @station.computers.new(params[:computer])
 
-    #respond_to do |format|
-    if @computer.save
-      redirect_to station_path(@station)
-      #format.html { redirect_to @computer, notice: 'Computer was successfully created.' }
-      #format.json { render json: @computer, status: :created, location: @computer }
-    else
-      #format.html { render action: "new" }
-      #format.json { render json: @computer.errors, status: :unprocessable_entity }
-      # end
+    respond_to do |format|
+      if @computer.save
+        # redirect_to station_path(@station)
+        format.html { redirect_to station_path(@station), notice: 'Computer was successfully created.' }
+        format.json { render json: @computer, status: :created, location: @computer }
+      else
+        format.html { render action: "new" }
+        format.json { render json: @computer.errors, status: :unprocessable_entity }
+      end
     end
   end
 
@@ -61,12 +61,14 @@ class ComputersController < ApplicationController
   # PUT /computers/1.json
   def update
     @computer = Computer.find(params[:id])
-@station = Station.find_by_id(params[:station_id])
+
     respond_to do |format|
       if @computer.update_attributes(params[:computer])
-        format.html { redirect_to @computer, notice: 'Computer was successfully updated.' }
+        #redirect_to station_computer_path(@computer.station_id, @computer)
+        format.html { redirect_to station_computer_path(@computer.station_id, @computer), notice: 'Computer was successfully updated.' }
         format.json { head :no_content }
       else
+        render action: "edit"
         format.html { render action: "edit" }
         format.json { render json: @computer.errors, status: :unprocessable_entity }
       end
@@ -79,9 +81,9 @@ class ComputersController < ApplicationController
     @computer = Computer.find(params[:id])
     @computer.destroy
 
-    respond_to do |format|
-      format.html { redirect_to computers_url }
-      format.json { head :no_content }
-    end
+    #respond_to do |format|
+    #  format.html { redirect_to computers_url }
+    #  format.json { head :no_content }
+    #end
   end
 end

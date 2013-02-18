@@ -1,6 +1,8 @@
-<h1>Editing modem</h1>
+<div class="alert">
+  <h2>Editing modem</h2>
+</div>
 
 <%= render 'form' %>
 
 <%= link_to 'Show', station_modem_path %> |
-<%= link_to 'Back', station_modems_path %>
+<%= link_to 'Back', station_path(@station_id) %>
