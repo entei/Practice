@@ -13,7 +13,12 @@
 
     <div class="field">
       <%= f.label :device_type %>
-      <%= f.text_field :device_type %>
+      <%= f.select :device_type, [['Стример'],
+            ['Проектор'],
+            ['Плазменная панель'],
+            ['Кодоскоп'],
+            ['ИБП до 1000 Вт'],
+            ['ИБП свыше 1000 Вт']]%>
     </div>
     <div class="field">
       <%= f.label :device_model %>
@@ -21,7 +26,14 @@
     </div>
     <div class="field">
       <%= f.label :source %>
-      <%= f.text_field :source %>
+      <%= f.select :source, [['Республиканский бюджет'],
+            ['Местный бюджет'],
+            ['На балансе сторонней организации'],
+            ['Передано безвозмездно'],
+            ['Получено из других подразделений'],
+            ['Спонсорские средства '],
+            ['Платные услуги']]%>
+      
     </div>
     <div class="field">
       <%= f.label :commissioning %>
