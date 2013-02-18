@@ -35,7 +35,16 @@
       <file leaf-file-name="Gemfile" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="45" selection-start="263" selection-end="263" vertical-scroll-proportion="0.4015748">
+            <state line="13" column="48" selection-start="239" selection-end="239" vertical-scroll-proportion="0.13385826">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/stations/index.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="0" selection-start="24" selection-end="24" vertical-scroll-proportion="-1.3076923">
               <folding />
             </state>
           </provider>
@@ -64,11 +73,11 @@
         <option value="$PROJECT_DIR$/app/views/computers/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/stations_controller.rb" />
         <option value="$PROJECT_DIR$/app/models/printer.rb" />
-        <option value="$PROJECT_DIR$/app/views/stations/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/stations/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/views/stations/show.html.erb" />
         <option value="$PROJECT_DIR$/config/environments/production.rb" />
+        <option value="$PROJECT_DIR$/app/views/stations/index.html.erb" />
         <option value="$PROJECT_DIR$/Gemfile" />
       </list>
     </option>
@@ -942,13 +951,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/stations/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="31" selection-start="441" selection-end="441" vertical-scroll-proportion="-13.230769">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/stations/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="4" selection-start="25" selection-end="25" vertical-scroll-proportion="-0.65384614">
@@ -977,9 +979,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/stations/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="24" selection-end="24" vertical-scroll-proportion="-1.3076923">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="45" selection-start="263" selection-end="263" vertical-scroll-proportion="0.4015748">
+        <state line="13" column="48" selection-start="239" selection-end="239" vertical-scroll-proportion="0.13385826">
           <folding />
         </state>
       </provider>
