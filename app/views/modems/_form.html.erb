@@ -18,17 +18,28 @@
     </div>
     <div class="field">
       <%= f.label :modem_type %>
-
-      <%= f.text_field :modem_type %>
+      
+      <%= f.select :modem_type, [['Аналоговый'],
+            ['Цифровой']]%>
     </div>
     <div class="field">
       <%= f.label :speed %>
-      <%= f.text_field :speed %>
+      <%= f.select :source, [['до 128'],
+            ['от 9600 до 19200'],
+            ['от 19200 до 33600'],
+            ['от 33600 до 56000'],
+            ['от 56000']]%>
+
     </div>
     <div class="field">
       <%= f.label :source %>
-
-      <%= f.text_field :source %>
+      <%= f.select :source, [['Республиканский бюджет'],
+            ['Местный бюджет'],
+            ['На балансе сторонней организации'],
+            ['Передано безвозмездно'],
+            ['Получено из других подразделений'],
+            ['Спонсорские средства '],
+            ['Платные услуги']]%>
     </div>
     <div class="field">
       <%= f.label :commissioning %>
