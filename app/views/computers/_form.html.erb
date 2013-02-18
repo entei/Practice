@@ -18,8 +18,11 @@
     </div>
     <div class="field">
       <%= f.label :comp_type %>
+        <%= f.select :comp_type, [['персональная'],
+            ['многопользовательская'],
+            ['мобильная'],
+            ['рабочая станция']]%>
 
-      <%= f.text_field :comp_type %>
     </div>
     <div class="field">
       <%= f.label :comp_class %>

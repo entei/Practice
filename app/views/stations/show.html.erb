@@ -1,5 +1,5 @@
 <p id="notice" xmlns="http://www.w3.org/1999/html"><%= notice %></p>
-
+  <div>
 <p>
   <b>Name:</b>
   <%= @station.name %>
@@ -9,11 +9,13 @@
   <b>District:</b>
   <%= @station.district_id %>
 </p>
+
+  <form class="navbar-search pull-right">
+    <input type="text" class="search-query" placeholder="Search">
+  </form>
+</div>
 <!-----------list of device---------->
 
-<form class="navbar-search pull-right">
-  <input type="text" class="search-query" placeholder="Search">
-</form>
 
 </br>
 
@@ -48,8 +50,8 @@
     <table class="table">
       <thead>
       <tr>
+        <th>Device</th>
         <th>Model</th>
-        <th>Type</th>
         <th>Station_id</th>
       </tr>
       </thead>
@@ -57,8 +59,8 @@
 
       <% @printers.each do |pr| %>
           <tr>
-            <td><%= pr.printer_model %></td>
-            <td> <%= pr.printer_type %> </td>
+            <td><%= pr.device %></td>
+            <td> <%= pr.printer_model %> </td>
             <td> <%= pr.station_id %> </td>
             <td> <%= link_to "show", station_printer_path(@station, pr) %></td>
             <td><%= link_to "edit", edit_station_printer_path(@station.id, pr.id) %></td>
