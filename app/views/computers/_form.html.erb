@@ -26,13 +26,20 @@
     </div>
     <div class="field">
       <%= f.label :comp_class %>
-
-      <%= f.text_field :comp_class %>
+        <%= f.select :comp_class, [['1'],
+            ['2'],
+            ['3'],
+            ['4'],
+            ['5'],
+            ['6']]%>
     </div>
     <div class="field">
       <%= f.label :platform %>
-
-      <%= f.text_field :platform %>
+      <%= f.select :platform, [['386'],
+            ['486'],
+            ['Pentium'],
+            ['Celeron'],
+            ['AMD']]%>
     </div>
     <div class="field">
       <%= f.label :processor %>
@@ -56,8 +63,13 @@
     </div>
     <div class="field">
       <%= f.label :source %>
-
-      <%= f.text_field :source %>
+      <%= f.select :source, [['Республиканский бюджет'],
+            ['Местный бюджет'],
+            ['На балансе сторонней организации'],
+            ['Передано безвозмездно'],
+            ['Получено из других подразделений'],
+            ['Спонсорские средства '],
+            ['Платные услуги']]%>
     </div>
     <div class="field">
       <%= f.label :commissioning %>
