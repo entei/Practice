@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130213152325) do
+ActiveRecord::Schema.define(:version => 20130215171206) do
 
   create_table "computers", :force => true do |t|
     t.string   "computer_model"
@@ -72,12 +72,12 @@ ActiveRecord::Schema.define(:version => 20130213152325) do
     t.string   "page_format"
     t.string   "chroma"
     t.string   "source"
-    t.string   "commissioning"
+    t.date     "commissioning",   :limit => 255
     t.string   "task"
     t.date     "decommissioning"
     t.string   "comment"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
+    t.datetime "created_at",                     :null => false
+    t.datetime "updated_at",                     :null => false
     t.integer  "station_id"
   end
 

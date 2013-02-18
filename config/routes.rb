@@ -5,8 +5,9 @@ Practic::Application.routes.draw do
     resources :computers
     resources :printers
     resources :modems
-
   end
+
+
   post "user/create"
   get "user/:id" => "User#show"
 # The priority is based upon order of creation:

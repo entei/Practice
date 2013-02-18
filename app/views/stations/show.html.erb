@@ -1,0 +1,129 @@
+<p id="notice" xmlns="http://www.w3.org/1999/html"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @station.name %>
+</p>
+
+<p>
+  <b>District:</b>
+  <%= @station.district_id %>
+</p>
+<!-----------list of device---------->
+
+<form class="navbar-search pull-right">
+  <input type="text" class="search-query" placeholder="Search">
+</form>
+
+</br>
+
+<% if @modems.any? %>
+    modems
+    <table class="table">
+      <thead>
+      <tr class="success">
+        <th>Model</th>
+        <th>Type</th>
+        <th>Station_id</th>
+      </tr>
+      </thead>
+      <tbody>
+
+      <% @modems.each do |modem| %>
+          <tr>
+            <td><%= modem.model %></td>
+            <td> <%= modem.modem_type %> </td>
+            <td> <%= modem.station_id %> </td>
+            <td> <%= link_to "show", station_modem_path(@station, modem) %></td>
+            <td><%= link_to "edit", edit_station_modem_path(@station.id, modem.id) %></td>
+            <td><%= link_to "delete", "#"%></td>
+          </tr>
+          </tbody>
+      <% end %>
+      </table>
+<% end %>
+
+<% if @printers.any? %>
+    printers
+    <table class="table">
+      <thead>
+      <tr>
+        <th>Model</th>
+        <th>Type</th>
+        <th>Station_id</th>
+      </tr>
+      </thead>
+      <tbody>
+
+      <% @printers.each do |pr| %>
+          <tr>
+            <td><%= pr.printer_model %></td>
+            <td> <%= pr.printer_type %> </td>
+            <td> <%= pr.station_id %> </td>
+            <td> <%= link_to "show", station_printer_path(@station, pr) %></td>
+            <td><%= link_to "edit", edit_station_printer_path(@station.id, pr.id) %></td>
+            <td><%= link_to "delete", '#' %></td>
+          </tr>
+          </tbody>
+      <% end %>
+      </table>
+<% end %>
+
+<% if @computers.any? %>
+    computers
+    <table class="table">
+      <thead>
+      <tr>
+        <th>Model</th>
+        <th>Type</th>
+        <th>Station_id</th>
+      </tr>
+      </thead>
+      <tbody>
+
+      <% @computers.each do |c| %>
+          <tr>
+            <td><%= c.computer_model %></td>
+            <td> <%= c.comp_type %> </td>
+            <td> <%= c.station_id %> </td>
+            <td> <%= link_to "show", station_computer_path(@station, c) %></td>
+            <td><%= link_to "edit", edit_station_computer_path(@station.id, c.id) %></td>
+            <td><%= link_to "delete", '#' %></td>
+          </tr>
+          </tbody>
+      <% end %>
+      </table>
+<% end %>
+
+<% if @devices.any? %>
+    device
+    <table class="table">
+      <thead>
+      <tr>
+        <th>Model</th>
+        <th>Type</th>
+        <th>Station_id</th>
+      </tr>
+      </thead>
+      <tbody>
+
+      <% @devices.each do |d| %>
+          <tr>
+            <td><%= d.device_model %></td>
+            <td> <%= d.device_type %> </td>
+            <td> <%= d.station_id %> </td>
+            <td> <%= link_to "show", station_device_path(@station, d) %></td>
+            <td><%= link_to "edit", edit_device_modem_path(@station.id, d.id) %></td>
+            <td><%= link_to "delete", '#' %></td>
+          </tr>
+          </tbody>
+      <% end %>
+      </table>
+<% end %>
+<!----------------------->
+<%= link_to 'Add Computer', new_station_computer_path(@station) %> |
+<%= link_to 'Add Device', new_station_device_path(@station) %> |
+<%= link_to 'Add Printer', new_station_printer_path(@station) %> |
+<%= link_to 'Add Modem', new_station_modem_path(@station) %> </br>
+<%= link_to 'Edit', edit_station_path(@station) %> |
+<%= link_to 'Back', stations_path %>

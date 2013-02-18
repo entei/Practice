@@ -3,6 +3,7 @@ class ModemsController < ApplicationController
   # GET /modems.json
   def index
     @modems = Modem.all
+
     @station_id = params[:station_id]
     respond_to do |format|
       format.html # index.html.erb

@@ -3,7 +3,7 @@ class DevicesController < ApplicationController
   # GET /devices.json
   def index
     @devices = Device.all
-
+    @station_id = params[:station_id]
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @devices }
@@ -14,7 +14,7 @@ class DevicesController < ApplicationController
   # GET /devices/1.json
   def show
     @device = Device.find(params[:id])
-
+    @station_id = params[:station_id]
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @device }
@@ -24,6 +24,7 @@ class DevicesController < ApplicationController
   # GET /devices/new
   # GET /devices/new.json
   def new
+    @station_id = params[:station_id]
     @device = Device.new
 
     respond_to do |format|
@@ -40,16 +41,18 @@ class DevicesController < ApplicationController
   # POST /devices
   # POST /devices.json
   def create
-    @device = Device.new(params[:device])
+    @station = Station.find_by_id(params[:station_id])
+    @device = @station.devices.new(params[:device])
 
-    respond_to do |format|
-      if @device.save
-        format.html { redirect_to @device, notice: 'Device was successfully created.' }
-        format.json { render json: @device, status: :created, location: @device }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @device.errors, status: :unprocessable_entity }
-      end
+    # respond_to do |format|
+    if @device.save
+      redirect_to station_path(@station)
+      # format.html { redirect_to @device, notice: 'Device was successfully created.' }
+      # format.json { render json: @device, status: :created, location: @device }
+    else
+      #format.html { render action: "new" }
+      #format.json { render json: @device.errors, status: :unprocessable_entity }
+      # end
     end
   end
 

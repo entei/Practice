@@ -1,45 +1,49 @@
-<%= form_for(@device) do |f| %>
-  <% if @device.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@device.errors.count, "error") %> prohibited this device from being saved:</h2>
+<%= form_for([:station, @device]) do |f| %>
+    <% if @device.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@device.errors.count, "error") %> prohibited this device from being saved:</h2>
 
-      <ul>
-      <% @device.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+          <ul>
+            <% @device.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :device_type %>
+      <%= f.text_field :device_type %>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :device_type %><br />
-    <%= f.text_field :device_type %>
-  </div>
-  <div class="field">
-    <%= f.label :device_model %><br />
-    <%= f.text_field :device_model %>
-  </div>
-  <div class="field">
-    <%= f.label :source %><br />
-    <%= f.text_field :source %>
-  </div>
-  <div class="field">
-    <%= f.label :commissioning %><br />
-    <%= f.date_select :commissioning %>
-  </div>
-  <div class="field">
-    <%= f.label :task %><br />
-    <%= f.text_field :task %>
-  </div>
-  <div class="field">
-    <%= f.label :decommissioning %><br />
-    <%= f.date_select :decommissioning %>
-  </div>
-  <div class="field">
-    <%= f.label :comment %><br />
-    <%= f.text_field :comment %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <div class="field">
+      <%= f.label :device_model %>
+      <%= f.text_field :device_model %>
+    </div>
+    <div class="field">
+      <%= f.label :source %>
+      <%= f.text_field :source %>
+    </div>
+    <div class="field">
+      <%= f.label :commissioning %>
+      <%= f.date_select :commissioning %>
+    </div>
+    <div class="field">
+      <%= f.label :task %>
+      <%= f.text_field :task %>
+    </div>
+    <div class="field">
+      <%= f.label :decommissioning %>
+      <%= f.date_select :decommissioning %>
+    </div>
+    <div class="field">
+      <%= f.label :comment %>
+      <%= f.text_field :comment %>
+    </div>
+    <div class="field">
+      <%= f.label :station_id %>
+      <%= f.text_field :station_id, :value => @station_id %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
 <% end %>
