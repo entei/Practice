@@ -1,13 +1,13 @@
 <h1>Listing devices</h1>
 
 <% if @devices.any? %>
-    device
+    Другое оборудование
     <table class="table">
       <thead>
       <tr>
-        <th>Model</th>
-        <th>Type</th>
-        <th>Station_id</th>
+        <th>Модель</th>
+        <th>Тип оборудования</th>
+        <th>ID станции</th>
       </tr>
       </thead>
       <tbody>
@@ -17,9 +17,9 @@
             <td><%= d.device_model %></td>
             <td> <%= d.device_type %> </td>
             <td> <%= d.station_id %> </td>
-            <td> <%= link_to "show", station_device_path(@station, d) %></td>
-            <td><%= link_to "edit", edit_station_device_path(@station, d) %></td>
-            <td><%= link_to "delete", '#' %></td>
+            <td> <%= link_to "просмотр", station_device_path(@station, d) %></td>
+            <td><%= link_to "редактировать", edit_station_device_path(@station, d) %></td>
+            <td><%= link_to "удалить", '#' %></td>
           </tr>
           </tbody>
       <% end %>
