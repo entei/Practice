@@ -1,55 +1,55 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Device:</b>
+  <b>Устройство:</b>
   <%= @printer.device %>
 </p>
 
 <p>
-  <b>Printer model:</b>
+  <b>Модель:</b>
   <%= @printer.printer_model %>
 </p>
 
 <p>
-  <b>Printer type:</b>
+  <b>Тип ПУ:</b>
   <%= @printer.printer_type %>
 </p>
 
 <p>
-  <b>Page format:</b>
+  <b>Формат:</b>
   <%= @printer.page_format %>
 </p>
 
 <p>
-  <b>Chroma:</b>
+  <b>Цветность:</b>
   <%= @printer.chroma %>
 </p>
 
 <p>
-  <b>Source:</b>
+  <b>Источник приобретения:</b>
   <%= @printer.source %>
 </p>
 
 <p>
-  <b>Commissioning:</b>
+  <b>Дата ввода в эксплуатацию:</b>
   <%= @printer.commissioning %>
 </p>
 
 <p>
-  <b>Task:</b>
+  <b>Какие задачи выполняет:</b>
   <%= @printer.task %>
 </p>
 
 <p>
-  <b>Decommissioning:</b>
+  <b>Дата списания:</b>
   <%= @printer.decommissioning %>
 </p>
 
 <p>
-  <b>Comment:</b>
+  <b>Примечание:</b>
   <%= @printer.comment %>
 </p>
 
 
-<%= link_to 'Edit', '#' %> |
-<%= link_to 'Back', station_path(@station_id) %>
+<%= link_to 'Редактировать', '#' %> |
+<%= link_to 'Назад', station_path(@station_id) %>
