@@ -22,7 +22,7 @@
 
 <p>
   <b>Какие задачи выполняет:</b>
-  <%= @device.task %>
+  <%= simple_format @device.task %>
 </p>
 
 <p>
@@ -32,7 +32,7 @@
 
 <p>
   <b>Примечание:</b>
-  <%= @device.comment %>
+  <%= simple_format (@device.comment) %>
 </p>
 
 
