@@ -20,14 +20,14 @@
 <% if @modems.any? %>
 
     <div class="alert alert-success">
-      <strong>MODEMS</strong>
+      <strong>МОДЕМЫ</strong>
     </div>
 
     <table class="table">
       <thead>
       <tr class="success">
-        <th>Model</th>
-        <th>Type</th>
+        <th>Модель</th>
+        <th>Тип</th>
 
       </tr>
       </thead>
@@ -38,9 +38,9 @@
             <td><%= modem.model %></td>
             <td> <%= modem.modem_type %> </td>
 
-            <td> <%= link_to "show", station_modem_path(@station, modem) %></td>
-            <td><%= link_to "edit", edit_station_modem_path(@station, modem) %></td>
-            <td><%= link_to "delete", "#"%></td>
+            <td> <%= link_to "просмотр", station_modem_path(@station, modem) %></td>
+            <td><%= link_to "редактировать", edit_station_modem_path(@station, modem) %></td>
+            <td><%= link_to "удалить", "#"%></td>
           </tr>
           </tbody>
       <% end %>
@@ -49,13 +49,13 @@
 
 <% if @printers.any? %>
     <div class="alert alert-success">
-      <strong>PRINTERS</strong>
+      <strong>ПЕЧАТНЫЕ УСТРОЙСТВА</strong>
     </div>
     <table class="table">
       <thead>
       <tr>
-        <th>Device</th>
-        <th>Model</th>
+        <th>Устройство</th>
+        <th>Модель</th>
 
       </tr>
       </thead>
@@ -66,9 +66,9 @@
             <td><%= pr.device %></td>
             <td> <%= pr.printer_model %> </td>
 
-            <td> <%= link_to "show", station_printer_path(@station, pr) %></td>
-            <td><%= link_to "edit", edit_station_printer_path(@station, pr) %></td>
-            <td><%= link_to "delete", '#' %></td>
+            <td> <%= link_to "просмотр", station_printer_path(@station, pr) %></td>
+            <td><%= link_to "редактировать", edit_station_printer_path(@station, pr) %></td>
+            <td><%= link_to "удалить", '#' %></td>
           </tr>
           </tbody>
       <% end %>
@@ -77,13 +77,13 @@
 
 <% if @computers.any? %>
     <div class="alert alert-success">
-      <strong>COMPUTERS</strong>
+      <strong>СВТ</strong>
     </div>
     <table class="table">
       <thead>
       <tr>
-        <th>Model</th>
-        <th>Type</th>
+        <th>Компьютер</th>
+        <th>Тип ЭВМ</th>
 
       </tr>
       </thead>
@@ -94,9 +94,9 @@
             <td><%= c.computer_model %></td>
             <td> <%= c.comp_type %> </td>
 
-            <td> <%= link_to "show", station_computer_path(@station, c) %></td>
-            <td><%= link_to "edit", edit_station_computer_path(@station, c) %></td>
-            <td><%= link_to "delete", '#' %></td>
+            <td> <%= link_to "просмотр", station_computer_path(@station, c) %></td>
+            <td><%= link_to "редактировать", edit_station_computer_path(@station, c) %></td>
+            <td><%= link_to "удалить", '#' %></td>
           </tr>
           </tbody>
       <% end %>
@@ -105,13 +105,13 @@
 
 <% if @devices.any? %>
     <div class="alert alert-success">
-      <strong>DEVICES</strong>
+      <strong>ДРУГОЕ ОБОРУДОВАНИЕ</strong>
     </div>
     <table class="table">
       <thead>
       <tr>
-        <th>Type</th>
-        <th>Model</th>
+        <th>Тип</th>
+        <th>Модель</th>
 
       </tr>
       </thead>
@@ -122,9 +122,9 @@
             <td><%= d.device_type %></td>
             <td> <%= d.device_model %> </td>
 
-            <td> <%= link_to "show", station_device_path(@station, d) %></td>
-            <td><%= link_to "edit", edit_station_device_path(@station, d) %></td>
-            <td><%= link_to "delete", '#' %></td>
+            <td> <%= link_to "просмотр", station_device_path(@station, d) %></td>
+            <td><%= link_to "редактировать", edit_station_device_path(@station, d) %></td>
+            <td><%= link_to "удалить", '#' %></td>
           </tr>
           </tbody>
       <% end %>
@@ -132,9 +132,9 @@
 <% end %>
 
 <!----------------------->
-<%= link_to 'Add Computer', new_station_computer_path(@station) %> |
-<%= link_to 'Add Device', new_station_device_path(@station) %> |
-<%= link_to 'Add Printer', new_station_printer_path(@station) %> |
-<%= link_to 'Add Modem', new_station_modem_path(@station) %> </br>
-<%= link_to 'Edit', edit_station_path(@station) %> |
-<%= link_to 'Back', stations_path %>
+<%= link_to 'Добавить СВТ', new_station_computer_path(@station) %> |
+<%= link_to 'Добавить другое оборудование', new_station_device_path(@station) %> |
+<%= link_to 'Добавить ПУ', new_station_printer_path(@station) %> |
+<%= link_to 'Добавить Модем', new_station_modem_path(@station) %> </br>
+<%= link_to 'Редактировать', edit_station_path(@station) %> |
+<%= link_to 'Назад', stations_path %>
