@@ -12,7 +12,7 @@
     <% end %>
 
     <div class="field">
-      <%= f.label :device %>
+      <%= f.label :"Устройство" %>
       <%= f.select :device, [['Принтер'],
       ['Сканер'],
       ['Копир'],
@@ -20,12 +20,12 @@
       
     </div>
     <div class="field">
-      <%= f.label :printer_model %>
+      <%= f.label :"Модель" %>
 
       <%= f.text_field :printer_model %>
     </div>
     <div class="field">
-      <%= f.label :printer_type %>
+      <%= f.label :"Тип ПУ" %>
        <%= f.select :printer_type, [['Планшетный'],
       ['Лазерный'],
       ['Струйный'],
@@ -33,18 +33,18 @@
       
     </div>
     <div class="field">
-      <%= f.label :page_format %>
+      <%= f.label :"Формат" %>
       <%= f.select :page_format, [['A3'],
       ['A4']]%>  
       
     </div>
     <div class="field">
-      <%= f.label :chroma %>
+      <%= f.label :"Цветность" %>
       <%= f.select :chroma, [['Цветной'],
       ['Черно-белый']]%>  
     </div>
     <div class="field">
-      <%= f.label :source %>
+      <%= f.label :"Источник приобретения" %>
       <%= f.select :source, [['Республиканский бюджет'],
       ['Местный бюджет'],
       ['На балансе сторонней организации'],
@@ -55,24 +55,24 @@
       
     </div>
     <div class="field">
-      <%= f.label :commissioning %>
+      <%= f.label :"дата ввода в эксплуатацию" %>
 
       <%= f.date_select  :commissioning %>
     </div>
     <div class="field">
-      <%= f.label :task %>
+      <%= f.label :"дата ввода в эксплуатацию" %>
 
-      <%= f.text_field :task %>
+      <%= f.text_area :task %>
     </div>
     <div class="field">
-      <%= f.label :decommissioning %>
+      <%= f.label :"дата списания" %>
 
       <%= f.date_select :decommissioning %>
     </div>
     <div class="field">
-      <%= f.label :comment %>
+      <%= f.label :"Примечание" %>
 
-      <%= f.text_field :comment %>
+      <%= f.text_area :comment %>
     </div>
     <div class="field">
 
