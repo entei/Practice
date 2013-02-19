@@ -79,7 +79,7 @@
     <div class="field">
       <%= f.label :"Какие задачи выполняет" %>
 
-      <%= f.text_area :task %>
+      <%= f.text_field :task %>
     </div>
     <div class="field">
       <%= f.label :"Дата списания" %>
@@ -89,7 +89,7 @@
     <div class="field">
       <%= f.label :"Примечание" %>
 
-      <%= f.text_field :comment %>
+      <%= f.text_area :comment %>
     </div>
     <div class="field">
       <%= f.hidden_field :station_id, :value => @station_id %>
