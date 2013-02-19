@@ -12,19 +12,19 @@
     <% end %>
 
     <div class="field">
-      <%= f.label :model %>
+      <%= f.label :"Модель" %>
 
       <%= f.text_field :model %>
     </div>
     <div class="field">
-      <%= f.label :modem_type %>
+      <%= f.label :"Тип модема" %>
       
       <%= f.select :modem_type, [['Аналоговый'],
             ['Цифровой']]%>
     </div>
     <div class="field">
-      <%= f.label :speed %>
-      <%= f.select :source, [['до 128'],
+      <%= f.label :"Скорость" %>
+      <%= f.select :speed, [['до 128'],
             ['от 9600 до 19200'],
             ['от 19200 до 33600'],
             ['от 33600 до 56000'],
@@ -32,7 +32,7 @@
 
     </div>
     <div class="field">
-      <%= f.label :source %>
+      <%= f.label :"Источник приобретения" %>
       <%= f.select :source, [['Республиканский бюджет'],
             ['Местный бюджет'],
             ['На балансе сторонней организации'],
@@ -42,22 +42,22 @@
             ['Платные услуги']]%>
     </div>
     <div class="field">
-      <%= f.label :commissioning %>
+      <%= f.label :"Дата ввода в эксплуатацию" %>
 
       <%= f.date_select :commissioning %>
     </div>
     <div class="field">
-      <%= f.label :task %>
+      <%= f.label :"Какие задачи выполняет" %>
 
       <%= f.text_field :task %>
     </div>
     <div class="field">
-      <%= f.label :decommissioning %>
+      <%= f.label :"Дата списания" %>
 
       <%= f.date_select :decommissioning %>
     </div>
     <div class="field">
-      <%= f.label :comment %>
+      <%= f.label :"Примечание" %>
       <%= f.text_field :comment %>
     </div>
     <div class="field">
