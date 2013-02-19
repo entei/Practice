@@ -40,11 +40,7 @@
   <%= @modem.comment %>
 </p>
 
-<p>
-  <b>ID станции:</b>
-  <%= @modem.station_id %>
-</p>
 
 
-<%= link_to 'Редактировать', '#' %> |
+<%= link_to 'Редактировать', edit_station_modem_path(@modem.station_id, @modem) %> |
 <%= link_to 'Назад', station_path(@station_id) %>

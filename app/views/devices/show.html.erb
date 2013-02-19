@@ -36,5 +36,6 @@
 </p>
 
 
-<%= link_to 'Редактировать', '#' %> |
+<%= link_to 'Редактировать', edit_station_device_path(@device.station_id, @device) %> |
+<td class="ctrl"><%= link_to 'Удалить', '#' %></td>|
 <%= link_to 'Назад', station_path(@station_id) %>

@@ -1,14 +1,14 @@
 <p id="notice" xmlns="http://www.w3.org/1999/html"><%= notice %></p>
-  <div class="alert">
+<div class="alert alert-info ">
   <h2>
-  <b>Название:</b>
-  <%= @station.name %>
-</h2>
+    <b>Название:</b>
+    <%= @station.name %>
+  </h2>
 
-<h4>
-  <b>Район:</b>
-  <%= @station.district_id %>
-</h4>
+  <h4>
+    <b>Район:</b>
+    <%= @station.district_id %>
+  </h4>
 
 </div>
 <!-----------list of device---------->
@@ -39,8 +39,8 @@
             <td> <%= modem.modem_type %> </td>
 
             <td class="ctrl"> <%= link_to "просмотр", station_modem_path(@station, modem) %></td>
-            <td class="ctrl"><%= link_to "редактировать", edit_station_modem_path(@station, modem) %></td>
-            <td class="ctrl"><%= link_to "удалить", "#"%></td>
+            <td class="ctrl"><%= link_to "редактировать", edit_station_modem_path(modem) %></td>
+
           </tr>
           </tbody>
       <% end %>
@@ -68,7 +68,7 @@
 
             <td class="ctrl"> <%= link_to "просмотр", station_printer_path(@station, pr) %></td>
             <td class="ctrl"><%= link_to "редактировать", edit_station_printer_path(@station, pr) %></td>
-            <td class="ctrl"><%= link_to "удалить", '#' %></td>
+
           </tr>
           </tbody>
       <% end %>
@@ -96,7 +96,7 @@
 
             <td class="ctrl"> <%= link_to "просмотр", station_computer_path(@station, c) %></td>
             <td class="ctrl"><%= link_to "редактировать", edit_station_computer_path(@station, c) %></td>
-            <td class="ctrl"><%= link_to "удалить", '#' %></td>
+
           </tr>
           </tbody>
       <% end %>
@@ -124,7 +124,7 @@
 
             <td class="ctrl"> <%= link_to "просмотр", station_device_path(@station, d) %></td>
             <td class="ctrl"><%= link_to "редактировать", edit_station_device_path(@station, d) %></td>
-            <td class="ctrl"><%= link_to "удалить", '#' %></td>
+
           </tr>
           </tbody>
       <% end %>
