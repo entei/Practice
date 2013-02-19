@@ -1,40 +1,40 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Device type:</b>
+  <b>Тип оборудования:</b>
   <%= @device.device_type %>
 </p>
 
 <p>
-  <b>Device model:</b>
+  <b>Модель:</b>
   <%= @device.device_model %>
 </p>
 
 <p>
-  <b>Source:</b>
+  <b>Источник приобретения:</b>
   <%= @device.source %>
 </p>
 
 <p>
-  <b>Commissioning:</b>
+  <b>Дата ввода в эксплуатацию:</b>
   <%= @device.commissioning %>
 </p>
 
 <p>
-  <b>Task:</b>
+  <b>Какие задачи выполняет:</b>
   <%= @device.task %>
 </p>
 
 <p>
-  <b>Decommissioning:</b>
+  <b>Дата списания:</b>
   <%= @device.decommissioning %>
 </p>
 
 <p>
-  <b>Comment:</b>
+  <b>Примечание:</b>
   <%= @device.comment %>
 </p>
 
 
-<%= link_to 'Edit', '#' %> |
-<%= link_to 'Back', station_path(@station_id) %>
+<%= link_to 'Редактировать', '#' %> |
+<%= link_to 'Назад', station_path(@station_id) %>
