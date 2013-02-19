@@ -79,11 +79,12 @@ class ComputersController < ApplicationController
   # DELETE /computers/1.json
   def destroy
     @computer = Computer.find(params[:id])
+    @station_id = @computer.station_id
     @computer.destroy
 
-    #respond_to do |format|
-    #  format.html { redirect_to computers_url }
-    #  format.json { head :no_content }
-    #end
+    respond_to do |format|
+      format.html { redirect_to station_path(@station_id) }
+      format.json { head :no_content }
+    end
   end
 end

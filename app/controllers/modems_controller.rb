@@ -57,7 +57,8 @@ class ModemsController < ApplicationController
         format.html { redirect_to station_path(@station), notice: 'Modem was successfully created.' }
         format.json { render json: @modem, status: :created, location: @modem }
       else
-        format.html { render action: "new" }
+        redirect_to station_path(@station)
+        #format.html { render action: "new" }
       end
     end
   end
@@ -83,10 +84,11 @@ class ModemsController < ApplicationController
   # DELETE /modems/1.json
   def destroy
     @modem = Modem.find(params[:id])
+    @station_id = @modem.station_id
     @modem.destroy
 
     respond_to do |format|
-      format.html { redirect_to modems_url }
+      format.html { redirect_to station_path(@station_id) }
       format.json { head :no_content }
     end
   end

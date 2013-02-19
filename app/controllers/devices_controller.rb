@@ -78,10 +78,12 @@ class DevicesController < ApplicationController
   # DELETE /devices/1.json
   def destroy
     @device = Device.find(params[:id])
+    @station_id = @device.station_id
     @device.destroy
 
+
     respond_to do |format|
-      format.html { redirect_to devices_url }
+      format.html { redirect_to station_path(@station_id) }
       format.json { head :no_content }
     end
   end

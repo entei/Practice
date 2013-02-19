@@ -78,10 +78,11 @@ class PrintersController < ApplicationController
 # DELETE /printers/1.json
   def destroy
     @printer = Printer.find(params[:id])
+    @station_id = @printer.station_id
     @printer.destroy
 
     respond_to do |format|
-      format.html { redirect_to station_path(@printer.station_id) }
+      format.html { redirect_to station_path(@station_id) }
       format.json { head :no_content }
     end
   end

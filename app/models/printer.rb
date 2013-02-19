@@ -3,4 +3,6 @@ class Printer < ActiveRecord::Base
                   :decommissioning, :device, :page_format,
                   :printer_model, :printer_type, :source, :task, :station_id
   belongs_to :station
+
+  validates :device, presence:true
 end
