@@ -4,9 +4,9 @@
     <table class="table">
       <thead>
       <tr class="success">
-        <th>Model</th>
-        <th>Type</th>
-        <th>Station_id</th>
+        <th>Модель</th>
+        <th>Тип модема</th>
+        <th>ID станции</th>
       </tr>
       </thead>
       <tbody>
@@ -16,9 +16,9 @@
             <td><%= modem.model %></td>
             <td> <%= modem.modem_type %> </td>
             <td> <%= modem.station_id %> </td>
-            <td> <%= link_to "show", station_modem_path(@station, modem) %></td>
-            <td><%= link_to "edit", edit_station_modem_path(@station, modem) %></td>
-            <td><%= link_to "delete", "#" %></td>
+            <td> <%= link_to "просмотр", station_modem_path(@station, modem) %></td>
+            <td><%= link_to "редактировать", edit_station_modem_path(@station, modem) %></td>
+            <td><%= link_to "удалить", "#" %></td>
           </tr>
           </tbody>
       <% end %>
