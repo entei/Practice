@@ -18,9 +18,9 @@
       <tr>
         <td><%= station.name %></td>
         <td><%= station.district_id %></td>
-        <td><a href= <%= station %> ><i class="icon-remove"></i> </a></td>
-        <td><%= link_to 'Просмотр', station %></td>
-        <td><%= link_to 'Удалить', station, method: :delete, data: {confirm: 'Вы уверены?'} %></td>
+        <td class="ctrl"><a href= <%= 'station' %> ><i class="icon-eye-open"></i> </a></td>
+        <td class="ctrl"><%= link_to 'Просмотр', station %></td>
+        <td class="ctrl"><%= link_to 'Удалить', station, method: :delete, data: {confirm: 'Вы уверены?'} %></td>
       </tr>
   <% end %>
 </table>
