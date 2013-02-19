@@ -12,12 +12,12 @@
     <% end %>
 
     <div class="field">
-      <%= f.label :"Модель" %>
+      <%= f.label :"Компьютер" %>
 
       <%= f.text_field :computer_model %>
     </div>
     <div class="field">
-      <%= f.label :comp_type %>
+      <%= f.label :"Тип ЭВМ" %>
         <%= f.select :comp_type, [['персональная'],
             ['многопользовательская'],
             ['мобильная'],
@@ -25,7 +25,7 @@
 
     </div>
     <div class="field">
-      <%= f.label :comp_class %>
+      <%= f.label :"Класс ЭВМ" %>
         <%= f.select :comp_class, [['1'],
             ['2'],
             ['3'],
@@ -34,7 +34,7 @@
             ['6']]%>
     </div>
     <div class="field">
-      <%= f.label :platform %>
+      <%= f.label :"Платформа" %>
       <%= f.select :platform, [['386'],
             ['486'],
             ['Pentium'],
@@ -42,27 +42,27 @@
             ['AMD']]%>
     </div>
     <div class="field">
-      <%= f.label :processor %>
+      <%= f.label :"Процессор" %>
 
       <%= f.text_field :processor %>
     </div>
     <div class="field">
-      <%= f.label :memory %>
+      <%= f.label :"Память" %>
 
       <%= f.text_field :memory %>
     </div>
     <div class="field">
-      <%= f.label :hdd %>
+      <%= f.label :"Жесткий диск" %>
 
       <%= f.text_field :hdd %>
     </div>
     <div class="field">
-      <%= f.label :display %>
+      <%= f.label :"Монитор" %>
 
       <%= f.text_field :display %>
     </div>
     <div class="field">
-      <%= f.label :source %>
+      <%= f.label :"Источник приобретения" %>
       <%= f.select :source, [['Республиканский бюджет'],
             ['Местный бюджет'],
             ['На балансе сторонней организации'],
@@ -72,22 +72,22 @@
             ['Платные услуги']]%>
     </div>
     <div class="field">
-      <%= f.label :commissioning %>
+      <%= f.label :"Дата ввода в эксплуатацию" %>
 
       <%= f.date_select :commissioning %>
     </div>
     <div class="field">
-      <%= f.label :task %>
+      <%= f.label :"Какие задачи выполняет" %>
 
-      <%= f.text_field :task %>
+      <%= f.text_area :task %>
     </div>
     <div class="field">
-      <%= f.label :decommissioning %>
+      <%= f.label :"Дата списания" %>
 
       <%= f.date_select :decommissioning %>
     </div>
     <div class="field">
-      <%= f.label :comment %>
+      <%= f.label :"Примечание" %>
 
       <%= f.text_field :comment %>
     </div>
