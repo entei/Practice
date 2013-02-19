@@ -5,4 +5,6 @@ class Station < ActiveRecord::Base
   has_many :devices, :dependent => :destroy
   has_many :modems, :dependent => :destroy
   has_many :printers, :dependent => :destroy
+
+  validates :name, presence: true
 end
