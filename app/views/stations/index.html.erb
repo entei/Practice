@@ -4,8 +4,8 @@
 <table class="table">
   <thead>
   <tr>
-    <th>Name</th>
-    <th>District</th>
+    <th>Название</th>
+    <th>Район</th>
     <th></th>
     <th></th>
     <th></th>
@@ -18,8 +18,8 @@
       <tr>
         <td><%= station.name %></td>
         <td><%= station.district_id %></td>
-        <td><%= link_to 'Show', station %></td>
-        <td><%= link_to 'Delete', station, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+        <td><%= link_to 'Просмотр', station %></td>
+        <td><%= link_to 'Удалить', station, method: :delete, data: {confirm: 'Вы уверены?'} %></td>
       </tr>
   <% end %>
 </table>
