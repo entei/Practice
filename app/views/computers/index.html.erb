@@ -2,13 +2,13 @@
 
 
 <% if @computers.any? %>
-    computers
+    СВТ
     <table class="table">
       <thead>
       <tr>
-        <th>Model</th>
-        <th>Type</th>
-        <th>Station_id</th>
+        <th>Компьютер</th>
+        <th>Тип ЭВМ</th>
+        <th>ID отделения</th></th>
       </tr>
       </thead>
       <tbody>
@@ -18,9 +18,9 @@
             <td><%= c.computer_model %></td>
             <td> <%= c.comp_type %> </td>
             <td> <%= c.station_id %> </td>
-            <td> <%= link_to "show", station_computer_path(@station, c) %></td>
-            <td><%= link_to "edit", edit_station_computer_path(@station, c) %></td>
-            <td><%= link_to "delete", '#' %></td>
+            <td> <%= link_to "просмотр", station_computer_path(@station, c) %></td>
+            <td><%= link_to "редактировать", edit_station_computer_path(@station, c) %></td>
+            <td><%= link_to "удалить", '#' %></td>
           </tr>
           </tbody>
       <% end %>
