@@ -4,5 +4,7 @@ class Printer < ActiveRecord::Base
                   :printer_model, :printer_type, :source, :task, :station_id
   belongs_to :station
 
-  validates :device, presence:true
+  def retirement?
+    self.decommissioning  < Date.today
+  end
 end
