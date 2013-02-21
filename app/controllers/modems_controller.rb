@@ -1,4 +1,5 @@
 class ModemsController < ApplicationController
+  skip_before_filter :authorize, only: [:show]
   # GET /modems
   ## GET /modems.json
   #def index

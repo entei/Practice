@@ -1,5 +1,17 @@
 Practic::Application.routes.draw do
 
+  get "static_pages/about"
+
+  get 'admin' => 'admin/index'
+
+  resources :users
+
+    controller :sessions do
+      get 'login' => :new
+      post 'login' => :create
+      delete 'logout' => :destroy
+    end
+
   resources :stations do
     resources :devices
     resources :computers
@@ -10,6 +22,8 @@ Practic::Application.routes.draw do
 
   post "user/create"
   get "user/:id" => "User#show"
+
+  match 'about' => 'Static_Pages#about'
 # The priority is based upon order of creation:
 # first created -> highest priority.
 

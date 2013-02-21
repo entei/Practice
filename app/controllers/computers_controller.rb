@@ -1,4 +1,5 @@
 class ComputersController < ApplicationController
+  skip_before_filter :authorize, only: [:show]
   # GET /computers
   # GET /computers.json
   #def index

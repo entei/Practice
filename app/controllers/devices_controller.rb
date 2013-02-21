@@ -1,4 +1,5 @@
 class DevicesController < ApplicationController
+  skip_before_filter :authorize, only: [:show]
   # GET /devices
   # GET /devices.json
   #def index

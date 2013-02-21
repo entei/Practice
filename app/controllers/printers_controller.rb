@@ -1,4 +1,5 @@
 class PrintersController < ApplicationController
+  skip_before_filter :authorize, only:[:show]
   # GET /printers
   # GET /printers.json
   #def index
